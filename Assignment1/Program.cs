@@ -62,7 +62,7 @@ namespace Assignment1
                 {
                     return String.Format("{0}[{1}]", symbol, tpl.Substring(1));
                 }
-                else if ("+-".Contains(symbol) && symbol == tpl.Substring(1, 1)) // handle --N, ++N captures
+                else if ("+-".Contains(symbol) && "+-".Contains(tpl.Substring(1, 1))) // handle --N, ++N, +-N, -+N captures
                 {
                     return String.Format("{0}[{1}]", symbol, tpl.Substring(1));
                 }

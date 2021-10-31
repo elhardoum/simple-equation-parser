@@ -188,6 +188,11 @@ namespace Assignment1.Test
                 var result = Double.Parse((new EquationParser(command)).evaluate());
                 Assert.Equal(14, result);
             }
+            {
+                var command = "12 + -2";
+                var result = Double.Parse((new EquationParser(command)).evaluate());
+                Assert.Equal(10, result);
+            }
         }
 
         [Fact]
